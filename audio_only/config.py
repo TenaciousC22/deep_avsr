@@ -13,8 +13,8 @@ args["CODE_DIRECTORY"] = None   #absolute path to the code directory
 args["DATA_DIRECTORY"] = None   #absolute path to the data directory
 args["DEMO_DIRECTORY"] = None   #absolute path to the demo directory
 args["PRETRAINED_MODEL_FILE"] = "/final/models/pretrained_model.pt"     #relative path to the pretrained model file
-args["TRAINED_MODEL_FILE"] = "/final/models/trained_model.pt"   #relative path to the trained model file
-args["TRAINED_LM_FILE"] = None  #absolute path to the trained language model file
+args["TRAINED_MODEL_FILE"] = "/final/models/audio-only.pt"   #relative path to the trained model file
+args["TRAINED_LM_FILE"] = "~/Documents/studentHDD/chris/deep_avsr/frontendModels/language_model.pt"  #absolute path to the trained language model file
 
 
 #data
