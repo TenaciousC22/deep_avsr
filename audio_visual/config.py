@@ -9,9 +9,9 @@ args = dict()
 
 
 #project structure
-args["CODE_DIRECTORY"] = "/home/analysis/Documents/studentHDD/chris/deep_avsr/audio_visual"   #absolute path to the code directory
+args["CODE_DIRECTORY"] = "/home/analysis/Documents/studentHDD/chris/deep_avsr/audio_visual/"   #absolute path to the code directory
 args["DATA_DIRECTORY"] = None   #absolute path to the data directory
-args["DEMO_DIRECTORY"] = "/home/analysis/Documents/studentHDD/chris/monoSubclips"   #absolute path to the demo directory
+args["DEMO_DIRECTORY"] = "/home/analysis/Documents/studentHDD/chris/monoSubclips/"   #absolute path to the demo directory
 args["PRETRAINED_MODEL_FILE"] = "final/models/pretrained_model.pt"     #relative path to the pretrained model file
 args["TRAINED_MODEL_FILE"] = "final/models/audio-visual.pt"   #relative path to the trained model file
 args["TRAINED_LM_FILE"] = "/home/analysis/Documents/studentHDD/chris/deep_avsr/frontendModels/language_model.pt"  #absolute path to the trained language model file
