@@ -87,7 +87,7 @@ args["BEAM_WIDTH"] = 100    #beam width
 args["LM_WEIGHT_ALPHA"] = 0.5   #weight of language model probability in shallow fusion beam scoring
 args["LENGTH_PENALTY_BETA"] = 0.1   #length penalty exponent hyperparameter
 args["THRESH_PROBABILITY"] = 0.0001 #threshold probability in beam search algorithm
-args["USE_LM"] = True  #whether to use language model for decoding
+args["USE_LM"] = False  #whether to use language model for decoding
 
 
 #testing
