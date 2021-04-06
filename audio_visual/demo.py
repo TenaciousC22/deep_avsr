@@ -97,7 +97,7 @@ def main():
 
                     if file[-6]=="l":
                         cType="jumble"
-                    else if file[-6]=="s":
+                    elif file[-6]=="s":
                         cType="base"
                     else:
                         cType=file[-8:-4]
