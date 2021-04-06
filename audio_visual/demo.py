@@ -81,10 +81,28 @@ def main():
 
         print("\n\nRunning Demo .... \n")
 
+        rows=[]
+
         #walking through the demo directory and running the model on all video files in it
         for root, dirs, files in os.walk(args["DEMO_DIRECTORY"]):
             for file in files:
                 if file.endswith(".mp4"):
+
+                    sNum=file[7]
+
+                    if file[13]<="9" and file[13]>="0":
+                        cNum=[12:14]
+                    else:
+                        cNum=[12]
+
+                    if file[-6]=="l":
+                        cType="jumble"
+                    else if file[-6]=="s":
+                        cType="base"
+                    else:
+                        cType=[-8:-4]
+
+
                     sampleFile = os.path.join(root, file[:-4])
 
                     #preprocessing the sample
@@ -136,6 +154,7 @@ def main():
 
                     #printing the predictions
                     print("File: %s" %(file))
+                    print("Speaker: "+sNum+"   Clip: "+cNum+"   Clip Type: "+cType)
                     print("Prediction: %s" %(pred))
                     print("\n")
 
