@@ -91,16 +91,16 @@ def main():
                     sNum=file[7]
 
                     if file[13]<="9" and file[13]>="0":
-                        cNum=[12:14]
+                        cNum=file[12:14]
                     else:
-                        cNum=[12]
+                        cNum=file[12]
 
                     if file[-6]=="l":
                         cType="jumble"
                     else if file[-6]=="s":
                         cType="base"
                     else:
-                        cType=[-8:-4]
+                        cType=file[-8:-4]
 
 
                     sampleFile = os.path.join(root, file[:-4])
