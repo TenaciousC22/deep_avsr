@@ -26,6 +26,7 @@ other than an apostrophe (').
 import torch
 import numpy as np
 import os
+import csv
 
 from config import args
 from models.av_net import AVNet
@@ -157,10 +158,16 @@ def main():
                     print("Speaker: "+sNum+"   Clip: "+cNum+"   Clip Type: "+cType)
                     print("Prediction: %s" %(pred))
                     print("\n")
+                    row=[sNum,cNum,cType,pred]
+                    rows.append(row)
 
 
         print("Demo Completed.\n")
 
+    with open("predictions.csv","w",newline="") as file:
+        writer=csv.writer(file)
+        for x in range(len(rows)):
+            writer.writerow(rows[x])
 
     else:
         print("\nPath to trained model file not specified.\n")
