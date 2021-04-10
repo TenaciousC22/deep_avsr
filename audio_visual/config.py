@@ -87,11 +87,11 @@ args["BEAM_WIDTH"] = 100    #beam width
 args["LM_WEIGHT_ALPHA"] = 0.5   #weight of language model probability in shallow fusion beam scoring
 args["LENGTH_PENALTY_BETA"] = 0.1   #length penalty exponent hyperparameter
 args["THRESH_PROBABILITY"] = 0.0001 #threshold probability in beam search algorithm
-args["USE_LM"] = False  #whether to use language model for decoding
+args["USE_LM"] = True  #whether to use language model for decoding
 
 
 #testing
-args["TEST_DEMO_DECODING"] = "greedy"   #test/demo decoding type - "greedy" or "search"
+args["TEST_DEMO_DECODING"] = "search"   #test/demo decoding type - "greedy" or "search"
 args["TEST_DEMO_NOISY"] = False #test/demo with noisy audio
 args["TEST_DEMO_MODE"] = "AV"   #mode to use AV model in - "AO" or "VO" or "AV"
 
