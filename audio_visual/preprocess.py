@@ -39,6 +39,9 @@ def main():
             if file.endswith(".mp4"):
                 filesList.append(os.path.join(root, file[:-4]))
 
+    filesList.sort()
+
+    print(filesList[0])
 
     #Preprocessing each sample
     print("\nNumber of data samples to be processed = %d" %(len(filesList)))
