@@ -51,6 +51,9 @@ def main():
     for file in tqdm(filesList[0:50000], leave=True, desc="Preprocess", ncols=75):
         preprocess_sample(file, params)
 
+    for file in tqdm(filesList[49999:], leave=True, desc="Preprocess", ncols=75):
+        preprocess_sample(file, params)
+
     print("\nPreprocessing Done.")
 
 
