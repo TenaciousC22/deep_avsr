@@ -49,6 +49,7 @@ def main():
 
     params = {"roiSize":args["ROI_SIZE"], "normMean":args["NORMALIZATION_MEAN"], "normStd":args["NORMALIZATION_STD"], "vf":vf}
     for file in tqdm(filesList[9530:50000], leave=True, desc="Preprocess", ncols=75):
+        print(file)
         preprocess_sample(file, params)
 
     for file in tqdm(filesList[49999:], leave=True, desc="Preprocess", ncols=75):
