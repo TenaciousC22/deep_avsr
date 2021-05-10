@@ -24,7 +24,7 @@ class LRS2Pretrain(Dataset):
         super(LRS2Pretrain, self).__init__()
         with open(datadir + "/" + dataset + ".txt", "r") as f:
             lines = f.readlines()
-        self.datalist = [datadir + "/pretrain/" + line.strip() for line in lines]
+        self.datalist = [datadir + line.strip() for line in lines]
         self.numWords = numWords
         self.charToIx = charToIx
         self.dataset = dataset
