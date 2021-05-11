@@ -50,7 +50,7 @@ args["NORMALIZATION_STD"] = 0.1688  #standard deviation value for normalization 
 
 #training
 args["SEED"] = 19220297 #seed for random number generators
-args["BATCH_SIZE"] = 64 #minibatch size
+args["BATCH_SIZE"] = 16 #minibatch size
 args["STEP_SIZE"] = 16384   #number of samples in one step (virtual epoch)
 args["NUM_STEPS"] = 1000 #maximum number of steps to train for (early stopping is used)
 args["SAVE_FREQUENCY"] = 20 #saving the model weights and loss/metric plots after every these many steps
