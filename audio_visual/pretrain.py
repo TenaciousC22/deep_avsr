@@ -107,7 +107,7 @@ def main():
     for step in range(args["NUM_STEPS"]):
 
         result=subprocess.run(['nvidia-smi'],stdout=subprocess.PIPE)
-        result.stdout.decode('utf-8')
+        print(result.stdout.decode('utf-8'))
 
         #train the model for one step
         trainingLoss, trainingCER, trainingWER = train(model, pretrainLoader, optimizer, loss_function, device, trainParams)
