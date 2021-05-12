@@ -13,6 +13,7 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 import os, shutil
+import subprocess
 
 from config import args
 from models.av_net import AVNet
@@ -104,6 +105,9 @@ def main():
     valParams = {"decodeScheme":"greedy", "spaceIx":args["CHAR_TO_INDEX"][" "], "eosIx":args["CHAR_TO_INDEX"]["<EOS>"], "aoProb":0, "voProb":0}
 
     for step in range(args["NUM_STEPS"]):
+
+        result=subprocess.run(['nvidia-smi'],stdout=subprocess.PIPE)
+        result.stdout.decode('utf-8')
 
         #train the model for one step
         trainingLoss, trainingCER, trainingWER = train(model, pretrainLoader, optimizer, loss_function, device, trainParams)
