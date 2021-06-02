@@ -64,7 +64,7 @@ args["LR_SCHEDULER_WAIT"] = 20  #number of steps to wait to lower learning rate
 args["LR_SCHEDULER_THRESH"] = 0.001 #threshold to check plateau-ing of wer
 args["MOMENTUM1"] = 0.9 #optimizer momentum 1 value
 args["MOMENTUM2"] = 0.999   #optimizer momentum 2 value
-args["AUDIO_ONLY_PROBABILITY"] = 0.0    #probability with which to use only the audio modality
+args["AUDIO_ONLY_PROBABILITY"] = 1.0    #probability with which to use only the audio modality
 args["VIDEO_ONLY_PROBABILITY"] = 0.0    #probability with which to use only the video modality
 
 
