@@ -84,6 +84,8 @@ def main():
 
         rows=[]
 
+        print(args['TEST_DEMO_MODE'])
+
         #walking through the demo directory and running the model on all video files in it
         for root, dirs, files in os.walk(args["DEMO_DIRECTORY"]):
             for file in files:
