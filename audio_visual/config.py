@@ -64,8 +64,8 @@ args["LR_SCHEDULER_WAIT"] = 20  #number of steps to wait to lower learning rate
 args["LR_SCHEDULER_THRESH"] = 0.001 #threshold to check plateau-ing of wer
 args["MOMENTUM1"] = 0.9 #optimizer momentum 1 value
 args["MOMENTUM2"] = 0.999   #optimizer momentum 2 value
-args["AUDIO_ONLY_PROBABILITY"] = 1.0    #probability with which to use only the audio modality
-args["VIDEO_ONLY_PROBABILITY"] = 0.0    #probability with which to use only the video modality
+args["AUDIO_ONLY_PROBABILITY"] = 0.2    #probability with which to use only the audio modality
+args["VIDEO_ONLY_PROBABILITY"] = 0.2    #probability with which to use only the video modality
 
 
 #model
@@ -93,7 +93,7 @@ args["USE_LM"] = True  #whether to use language model for decoding
 #testing
 args["TEST_DEMO_DECODING"] = "search"   #test/demo decoding type - "greedy" or "search"
 args["TEST_DEMO_NOISY"] = False #test/demo with noisy audio
-args["TEST_DEMO_MODE"] = "AV"   #mode to use AV model in - "AO" or "VO" or "AV"
+args["TEST_DEMO_MODE"] = "AO"   #mode to use AV model in - "AO" or "VO" or "AV"
 
 
 if __name__ == "__main__":
