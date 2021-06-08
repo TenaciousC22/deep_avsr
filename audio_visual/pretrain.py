@@ -105,9 +105,10 @@ def main():
     valParams = {"decodeScheme":"greedy", "spaceIx":args["CHAR_TO_INDEX"][" "], "eosIx":args["CHAR_TO_INDEX"]["<EOS>"], "aoProb":0, "voProb":0}
 
     for step in range(args["NUM_STEPS"]):
-
-        result=subprocess.run(['nvidia-smi'],stdout=subprocess.PIPE)
-        print(result.stdout.decode('utf-8'))
+        #*****************************************************************
+        # result=subprocess.run(['nvidia-smi'],stdout=subprocess.PIPE)
+        # print(result.stdout.decode('utf-8'))
+        #*****************************************************************
 
         #train the model for one step
         trainingLoss, trainingCER, trainingWER = train(model, pretrainLoader, optimizer, loss_function, device, trainParams)
