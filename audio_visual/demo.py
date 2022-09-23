@@ -134,7 +134,6 @@ def main():
                         print("Invalid Operation Mode.")
                         exit()
 
-                    print("starting")
                     model.eval()
                     with torch.no_grad():
                         outputBatch = model(inputBatch)
@@ -144,6 +143,7 @@ def main():
                         predictionBatch, predictionLenBatch = ctc_greedy_decode(outputBatch, inputLenBatch, args["CHAR_TO_INDEX"]["<EOS>"])
 
                     elif args["TEST_DEMO_DECODING"] == "search":
+                        pint("here")
                         beamSearchParams = {"beamWidth":args["BEAM_WIDTH"], "alpha":args["LM_WEIGHT_ALPHA"], "beta":args["LENGTH_PENALTY_BETA"],
                                             "threshProb":args["THRESH_PROBABILITY"]}
                         predictionBatch, predictionLenBatch = ctc_search_decode(outputBatch, inputLenBatch, beamSearchParams,
