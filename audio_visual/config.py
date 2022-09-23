@@ -93,7 +93,7 @@ args["USE_LM"] = True  #whether to use language model for decoding
 #testing
 args["TEST_DEMO_DECODING"] = "search"   #test/demo decoding type - "greedy" or "search"
 args["TEST_DEMO_NOISY"] = False #test/demo with noisy audio
-args["TEST_DEMO_MODE"] = "AO"   #mode to use AV model in - "AO" or "VO" or "AV"
+args["TEST_DEMO_MODE"] = "AV"   #mode to use AV model in - "AO" or "VO" or "AV"
 
 
 if __name__ == "__main__":
