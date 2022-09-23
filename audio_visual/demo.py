@@ -143,11 +143,12 @@ def main():
                         predictionBatch, predictionLenBatch = ctc_greedy_decode(outputBatch, inputLenBatch, args["CHAR_TO_INDEX"]["<EOS>"])
 
                     elif args["TEST_DEMO_DECODING"] == "search":
-                        pint("here")
+                        print("here")
                         beamSearchParams = {"beamWidth":args["BEAM_WIDTH"], "alpha":args["LM_WEIGHT_ALPHA"], "beta":args["LENGTH_PENALTY_BETA"],
                                             "threshProb":args["THRESH_PROBABILITY"]}
                         predictionBatch, predictionLenBatch = ctc_search_decode(outputBatch, inputLenBatch, beamSearchParams,
                                                                                 args["CHAR_TO_INDEX"][" "], args["CHAR_TO_INDEX"]["<EOS>"], lm)
+                        print("Searched")
                     else:
                         print("Invalid Decode Scheme")
                         exit()
