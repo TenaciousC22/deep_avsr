@@ -134,6 +134,7 @@ def main():
                         print("Invalid Operation Mode.")
                         exit()
 
+                    print("starting")
                     model.eval()
                     with torch.no_grad():
                         outputBatch = model(inputBatch)
