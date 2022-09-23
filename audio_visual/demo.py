@@ -165,7 +165,7 @@ def main():
 
 
         print("Demo Completed.\n")
-        with open("predictions-noise.csv","w",newline="") as file:
+        with open("predictions-noise-10db.csv","w",newline="") as file:
             writer=csv.writer(file)
             for x in range(len(rows)):
                 writer.writerow(rows[x])
